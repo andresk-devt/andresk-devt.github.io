@@ -1,15 +1,30 @@
 <template>
-  <div>
-    <h1>Its working!</h1>
-  </div>
+  <main class="main-container">
+    <SectionSelector class="section-selector" :selectedComponent="'Home'"/>
+  </main>
 </template>
 
 <script>
-export default {
+import SectionSelector from "@/components/sectionSelector.vue";
 
+export default {
+  components: {
+    SectionSelector
+  }
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+.main-container {
+  height: 100%;
+  width: 100%;
+}
+.section-selector {
+  position: fixed;
+  top: 35%;
+  left: 4%;
+  @media (max-width: 800px) {
+    left: 2%;
+  }
+}
 </style>
