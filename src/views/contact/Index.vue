@@ -1,17 +1,17 @@
 <template>
-  <div class="home">
-    <div class="home-content"></div>
+  <div class="contact">
+    <div class="contact-content"></div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Home'
+  name: 'Contact'
 }
 </script>
 
 <style lang="scss" scoped>
-.home {
+.contact {
   width: 100%;
   height: 100%;
   display: flex;
