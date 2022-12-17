@@ -89,7 +89,11 @@ export default {
     font-family: "Arial";
     color: white;
     font-size: 1rem;
+    p {
+      line-height: 20px;
+    }
     @media (min-width: 800px) {
+      font-size: .9rem;
       width: 50%;
       margin: 20px 0px;
     }
