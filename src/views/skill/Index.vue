@@ -9,94 +9,12 @@
         </div>
         <main class="skills-main-content">
           <div class="skills-container-list">
-            <div class="skills-container-list__item">
-              <div class="skill-container">
-                <ion-icon name="logo-github"></ion-icon>
-                <div class="skill-container__title">
-                  <span>Git Version Control</span>
-                </div>
-                <div class="skill-container__description">
-                  <span
-                    >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Non incidunt dolor, voluptate ab ad ipsum. Magnam, ipsum
-                    recusandae et dolore soluta maxime.</span
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="skills-container-list__item">
-              <div class="skill-container">
-                <ion-icon name="globe-outline"></ion-icon>
-                <div class="skill-container__title">
-                  <span>Web Development</span>
-                </div>
-                <div class="skill-container__description">
-                  <span
-                    >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Non incidunt dolor, voluptate ab ad ipsum. Magnam, ipsum
-                    recusandae et dolore soluta maxime.</span
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="skills-container-list__item">
-              <div class="skill-container">
-                <ion-icon name="logo-angular"></ion-icon>
-                <div class="skill-container__title">
-                  <span>Front-End Development</span>
-                </div>
-                <div class="skill-container__description">
-                  <span
-                    >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Non incidunt dolor, voluptate ab ad ipsum. Magnam, ipsum
-                    recusandae et dolore soluta maxime.</span
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="skills-container-list__item">
-              <div class="skill-container">
-                <ion-icon name="phone-portrait-outline"></ion-icon>
-                <div class="skill-container__title">
-                  <span>Responsive Design</span>
-                </div>
-                <div class="skill-container__description">
-                  <span
-                    >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Non incidunt dolor, voluptate ab ad ipsum. Magnam, ipsum
-                    recusandae et dolore soluta maxime.</span
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="skills-container-list__item">
-              <div class="skill-container">
-                <ion-icon name="server-outline"></ion-icon>
-                <div class="skill-container__title">
-                  <span>Back-End Development</span>
-                </div>
-                <div class="skill-container__description">
-                  <span
-                    >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Non incidunt dolor, voluptate ab ad ipsum. Magnam</span
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="skills-container-list__item">
-              <div class="skill-container">
-                <ion-icon name="logo-amazon"></ion-icon>
-                <div class="skill-container__title">
-                  <span>AWS</span>
-                </div>
-                <div class="skill-container__description">
-                  <span
-                    >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Non incidunt dolor, voluptate ab ad ipsum. Magnam, ipsum
-                    recusandae et dolore soluta maxime.</span
-                  >
-                </div>
-              </div>
+            <div
+              class="skills-container-list__item"
+              v-for="item in skills"
+              :key="item.title"
+            >
+              <Card :skill="item" />
             </div>
           </div>
         </main>
@@ -106,14 +24,53 @@
 </template>
 
 <script>
+import Card from "./components/Card.vue";
+
 export default {
   name: "Skills",
+  components: {
+    Card,
+  },
   data() {
     return {
-      obj: {
-        icon: "logo-github",
-        title: "Git Version Control",
-      },
+      skills: [
+        {
+          icon: "logo-github",
+          title: "Git Version Control",
+          description:
+            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nonincidunt dolor, voluptate ab ad ipsum. Magnam, ipsum recusandae etdolore soluta maxime.",
+        },
+        {
+          icon: "server-outline",
+          title: "Back-End Development",
+          description:
+            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nonincidunt dolor, voluptate ab ad ipsum. Magnam, ipsum recusandae etdolore soluta maxime.",
+        },
+        {
+          icon: "logo-angular",
+          title: "Front-End Development",
+          description:
+            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nonincidunt dolor, voluptate ab ad ipsum. Magnam, ipsum recusandae etdolore soluta maxime.",
+        },
+        {
+          icon: "globe-outline",
+          title: "Web Development",
+          description:
+            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nonincidunt dolor, voluptate ab ad ipsum. Magnam, ipsum recusandae etdolore soluta maxime.",
+        },
+        {
+          icon: "logo-amazon",
+          title: "AWS",
+          description:
+            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nonincidunt dolor, voluptate ab ad ipsum. Magnam, ipsum recusandae etdolore soluta maxime.",
+        },
+        {
+          icon: "phone-portrait-outline",
+          title: "Responsive Design",
+          description:
+            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nonincidunt dolor, voluptate ab ad ipsum. Magnam, ipsum recusandae etdolore soluta maxime.",
+        },
+      ],
     };
   },
 };
@@ -185,27 +142,8 @@ export default {
   }
   &__item {
     height: 100%;
-    // height: 230px;
     background: #282c3e;
   }
-}
-.skill-container {
-  padding: 20px;
-  font-family: 'Arial';
-  &__title {
-    font-size: 1rem;
-    color: white;
-    font-weight: bold;
-    margin: 20px 0px 10px 0px;
-  }
-  &__description {
-    font-size: .9rem;
-    color: #ecf0f1;
-  }
-}
-ion-icon {
-  font-size: 3rem;
-  color: rgb(246, 71, 85);
 }
 ::-webkit-scrollbar {
   display: none;
