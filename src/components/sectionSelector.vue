@@ -5,6 +5,7 @@
       :key="item.name"
       :class="selectedComponent === item.name ? 'active' : ''"
       class="section-selector__item"
+      @click="scrollCard(item.name)"
     >
       <ion-icon :name="item.icon" title></ion-icon>
     </li>
@@ -20,12 +21,17 @@ export default {
   data() {
     return {
       items: [
-        { name: "Home", icon: "home-outline", isSelected: false },
-        { name: "Skills", icon: "flash-outline", isSelected: false },
-        { name: "Projects", icon: "albums-outline", isSelected: false },
-        { name: "Contact", icon: "mail-outline", isSelected: false },
+        { name: "home", icon: "home-outline", isSelected: false },
+        { name: "skills", icon: "flash-outline", isSelected: false },
+        { name: "projects", icon: "albums-outline", isSelected: false },
+        { name: "contact", icon: "mail-outline", isSelected: false },
       ],
     };
+  },
+  methods: {
+    scrollCard(ref) {
+      this.$emit("animatedScrollCard", ref);
+    },
   },
 };
 </script>
