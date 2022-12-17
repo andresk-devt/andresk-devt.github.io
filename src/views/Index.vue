@@ -1,7 +1,7 @@
 <template>
   <main class="main-container">
     <SectionSelector class="section-selector" :selectedComponent="selectedComponent" @animatedScrollCard="animatedScrollCard" />
-    <Home ref="home" id="home" />
+    <Home ref="home" id="home" @animatedScrollCard="animatedScrollCard" />
     <Skill ref="skills" id="skills" />
     <Project ref="projects" id="projects" />
     <Contact ref="contact" id="contact" />
