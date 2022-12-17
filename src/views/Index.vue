@@ -35,7 +35,7 @@ export default {
   },
   methods: {
     animatedScrollCard(refName) {
-      this.activeCard = this.$refs[refName].$el.id;
+      this.selectedComponent = this.$refs[refName]?.$el.id;
       const element = this.$refs[refName].$el;
       const position = element.offsetTop;
       window.scrollTo({
@@ -60,7 +60,7 @@ export default {
       }
       Object.entries(this.componentsPosition).forEach(([key, value]) => {
         if (value >= -760 && value <= 0) {
-          this.activeCard = key;
+          this.selectedComponent = key;
         }
       })
     },
