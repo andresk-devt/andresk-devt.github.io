@@ -138,7 +138,9 @@ export default {
   grid-template-rows: 50% 50%;
   @media (max-width: 800px) {
     grid-template-columns: repeat(auto-fill, minmax(200px, 4fr));
-    grid-template-rows: 300px;
+    grid-template-rows: repeat(6, 300px);
+    height: 95%;
+    overflow: auto;
   }
   &__item {
     height: 100%;
