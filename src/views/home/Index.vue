@@ -5,12 +5,12 @@
         <div class="personal-content">
           <div class="personal-content__title">
             <p class="personal-content__text">Hi, I'm</p>
-          </div>
-          <div class="title-content-list">
-            <ul class="title-list">
-              <li class="title-list__item">Andres Camilo Gomez!</li>
-              <li class="title-list__item">a Frontend Developer!</li>
-            </ul>
+            <div class="title-content">
+              <ul class="title-list">
+                <li class="title-list__item">Andres Camilo Gomez!</li>
+                <li class="title-list__item">a Frontend Developer!</li>
+              </ul>
+            </div>
           </div>
           <div class="personal-content__information">
             <p>
@@ -61,18 +61,27 @@ export default {
 .personal-content {
   padding: 15px;
   padding-left: 28px;
+  color: #ecf0f1;
   &__title {
-    display: flex;
-    flex-direction: column;
     font-weight: 600;
     font-family: "Arial";
+    overflow: hidden;
+    height: 40px;
     color: white;
-    font-size: 1.6rem;
+    font-size: 2rem;
+    @media (max-width: 800px) {
+      font-size: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
   }
   &__text {
     display: block;
     float: left;
     margin: 0;
+    display: flex;
+    align-items: center;
     height: 100%;
   }
   &__information {
@@ -80,30 +89,32 @@ export default {
     font-family: "Arial";
     color: white;
     font-size: 1rem;
+    @media (min-width: 800px) {
+      width: 50%;
+      margin: 20px 0px;
+    }
   }
 }
-.title-content-list {
-  margin: auto;
-  overflow: hidden;
-  height: 30px;
-  font-weight: 600;
-  font-family: "Arial";
-  color: white;
-  font-size: 1.5rem;
+.title-content {
+  @media (max-width: 800px) {
+    overflow: hidden;
+    height: 40px;
+  }
 }
 .title-list {
   margin-top: 0;
-  // padding-left: 60px;
+  padding-left: 110px;
   text-align: left;
   list-style: none;
-  // overflow: hidden;
-  // height: 40px;
   -webkit-animation-name: change;
   -webkit-animation-duration: 10s;
   -webkit-animation-iteration-count: infinite;
   animation-name: change;
   animation-duration: 10s;
   animation-iteration-count: infinite;
+  @media (max-width: 800px) {
+    padding-left: 0px;
+  }
   &__item {
     line-height: 40px;
     margin: 0;
@@ -119,15 +130,6 @@ export default {
   cursor: pointer;
   &:hover {
     filter: brightness(0.9);
-  }
-}
-@keyframes opacity {
-  0%,
-  100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
   }
 }
 @keyframes change {
