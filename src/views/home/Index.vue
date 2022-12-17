@@ -20,7 +20,7 @@
               give continuous feedback and manage good practices.
             </p>
           </div>
-          <button class="button-content">Skills</button>
+          <button class="button-content" @click="scrollTo('skills')">Skills</button>
         </div>
       </div>
     </div>
@@ -30,6 +30,11 @@
 <script>
 export default {
   name: "Home",
+  methods: {
+    scrollTo(ref) {
+      this.$emit('animatedScrollCard', ref);
+    }
+  }
 };
 </script>
 
@@ -94,7 +99,7 @@ export default {
     }
     @media (min-width: 800px) {
       font-size: .9rem;
-      width: 50%;
+      width: 60%;
       margin: 20px 0px;
     }
   }

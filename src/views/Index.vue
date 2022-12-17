@@ -1,10 +1,10 @@
 <template>
   <main class="main-container">
-    <SectionSelector class="section-selector" :selectedComponent="'Home'"/>
-    <Home />
-    <Skill />
-    <Project />
-    <Contact />
+    <SectionSelector class="section-selector" :selectedComponent="selectedComponent" @animatedScrollCard="animatedScrollCard" />
+    <Home ref="home" id="home" @animatedScrollCard="animatedScrollCard" />
+    <Skill ref="skills" id="skills" />
+    <Project ref="projects" id="projects" />
+    <Contact ref="contact" id="contact" />
   </main>
 </template>
 
@@ -22,7 +22,49 @@ export default {
     Skill,
     Project,
     Contact
-  }
+  },
+  data() {
+    return {
+      selectedComponent: 'home',
+      componentPosition: null
+    }
+  },
+  mounted() {
+    this.onScroll();
+    window.addEventListener("scroll", this.onScroll);
+  },
+  methods: {
+    animatedScrollCard(refName) {
+      this.selectedComponent = this.$refs[refName]?.$el.id;
+      const element = this.$refs[refName].$el;
+      const position = element.offsetTop;
+      window.scrollTo({
+        top: position,
+        left: 0,
+        behavior: "smooth",
+      });
+    },
+    onScroll() {
+      this.calculatePositionOfBox();
+    },
+    calculatePositionOfBox() {
+      const home = this.$refs['home'].$el.getBoundingClientRect().top;
+      const skills = this.$refs['skills'].$el.getBoundingClientRect().top;
+      const projects = this.$refs['projects'].$el.getBoundingClientRect().top;
+      const contact = this.$refs['contact'].$el.getBoundingClientRect().top;
+      this.componentsPosition = {
+        home,
+        skills,
+        projects,
+        contact
+      }
+      Object.entries(this.componentsPosition).forEach(([key, value]) => {
+        if (value >= -760 && value <= 0) {
+          this.selectedComponent = key;
+        }
+      })
+    },
+  },
 }
 </script>
 
