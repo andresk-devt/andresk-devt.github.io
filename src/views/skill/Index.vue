@@ -78,8 +78,7 @@
                 <div class="skill-container__description">
                   <span
                     >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Non incidunt dolor, voluptate ab ad ipsum. Magnam, ipsum
-                    recusandae et dolore soluta maxime.</span
+                    Non incidunt dolor, voluptate ab ad ipsum. Magnam</span
                   >
                 </div>
               </div>
@@ -175,6 +174,7 @@ export default {
 }
 .skills-container-list {
   width: 100%;
+  height: 90%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(30%, 4fr));
   gap: 20px;
@@ -185,7 +185,22 @@ export default {
   }
   &__item {
     height: 100%;
+    // height: 230px;
     background: #282c3e;
+  }
+}
+.skill-container {
+  padding: 20px;
+  font-family: 'Arial';
+  &__title {
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    margin: 20px 0px 10px 0px;
+  }
+  &__description {
+    font-size: .9rem;
+    color: #ecf0f1;
   }
 }
 ion-icon {
