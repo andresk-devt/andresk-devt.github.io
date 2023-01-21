@@ -41,14 +41,14 @@ export default {
             "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nonincidunt dolor, voluptate ab ad ipsum. Magnam, ipsum recusandae etdolore soluta maxime.",
         },
         {
-          icon: "server-outline",
-          title: "Back-End Development",
+          icon: "logo-angular",
+          title: "Front-End Development",
           description:
             "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nonincidunt dolor, voluptate ab ad ipsum. Magnam, ipsum recusandae etdolore soluta maxime.",
         },
         {
-          icon: "logo-angular",
-          title: "Front-End Development",
+          icon: "server-outline",
+          title: "Back-End Development",
           description:
             "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nonincidunt dolor, voluptate ab ad ipsum. Magnam, ipsum recusandae etdolore soluta maxime.",
         },
