@@ -3,8 +3,8 @@
     <div class="skills-content">
       <div class="skills-content-container">
         <div class="skills-title">
-          <span>Services</span>
-          <h1 class="skills-title__text">Skills-Set</h1>
+          <span>{{ $t('skills.services') }}</span>
+          <h1 class="skills-title__text">{{ $t('skills.skillSet') }}</h1>
           <hr class="skills-title__under" />
         </div>
         <main class="skills-main-content">

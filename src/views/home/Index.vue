@@ -4,23 +4,20 @@
       <div class="home-content-container">
         <div class="personal-content">
           <div class="personal-content__title">
-            <p class="personal-content__text">Hi, I'm</p>
+            <p class="personal-content__text">{{ $t('home.gretting') }}</p>
             <div class="title-content">
               <ul class="title-list">
                 <li class="title-list__item">Andres Camilo Gomez!</li>
-                <li class="title-list__item">a Frontend Developer!</li>
+                <li class="title-list__item">{{ $t('home.labor') }}</li>
               </ul>
             </div>
           </div>
           <div class="personal-content__information">
             <p>
-              Front-end developer, I like to teach what I know and learn new
-              things from others. I consider myself a self-taught person and I
-              enjoy being in constant learning, I like to work in a team and
-              give continuous feedback and manage good practices.
+              {{ $t('home.aboutMe') }}
             </p>
           </div>
-          <button class="button-content" @click="scrollTo('skills')">Skills</button>
+          <button class="button-content" @click="scrollTo('skills')">{{ $t('home.skills') }}</button>
         </div>
       </div>
     </div>

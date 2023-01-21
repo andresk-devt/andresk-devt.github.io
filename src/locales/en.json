@@ -1,0 +1,22 @@
+{
+  "home": {
+    "gretting": "Hi, I'm",
+    "labor": "a Frontend Developer!",
+    "aboutMe": "Front-end developer, I like to teach what I know and learn new things from others. I consider myself self-taught, I like to be constantly learning and working in a team. Give and receive continuous feedback and apply good practices in the code.",
+    "skills": "Skills"
+  },
+  "skills": {
+    "services": "Services",
+    "skillSet": "Skills-Set"
+  },
+  "projects": {
+    "featured": "Featured",
+    "projects": "Projects"
+  },
+  "contactMe": {
+    "contact": "Contact With Me",
+    "email": "Email:",
+    "message": "Message:",
+    "stayInContact": "Stay Connected"
+  }
+}

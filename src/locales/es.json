@@ -1,0 +1,22 @@
+{
+  "home": {
+    "gretting": "Yo soy",
+    "labor": "Desarrollador Web!",
+    "aboutMe": "Desarrollador web, me gusta enseñar lo que sé y aprender cosas nuevas de los demás. Me considero autodidacta, me gusta estar en constante aprendizaje y trabajar en equipo. Dar y recibir feedback continuo y aplicar buenas prácticas en el código.",
+    "skills": "Habilidades"
+  },
+  "skills": {
+    "services": "Servicios",
+    "skillSet": "Competencias"
+  },
+  "projects": {
+    "featured": "Destacados",
+    "projects": "Proyectos"
+  },
+  "contactMe": {
+    "contact": "Contacta Conmigo",
+    "email": "Correo electronico:",
+    "message": "Mensaje:",
+    "stayInContact": "Contactar"
+  }
+}

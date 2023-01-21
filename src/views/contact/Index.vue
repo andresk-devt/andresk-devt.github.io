@@ -4,13 +4,21 @@
       <div class="contact-content-container">
         <div class="contact-container">
           <div class="contact-form">
-            <h3 class="contact-form__title">Contact With Me</h3>
+            <h3 class="contact-form__title">{{ $t("contactMe.contact") }}</h3>
             <hr class="contact-form__under" />
-            <input type="text" class="input-container" placeholder="Email" />
-            <textarea type="text" class="input-container input-container__message" placeholder="Message" />
+            <input
+              type="text"
+              class="input-container"
+              :placeholder="$t('contactMe.email')"
+            />
+            <textarea
+              type="text"
+              class="input-container input-container__message"
+              :placeholder="$t('contactMe.message')"
+            />
             <div class="contact-button-container">
               <button class="contact-button-container__button">
-                Stay Connected
+                {{ $t("contactMe.stayInContact") }}
                 <ion-icon name="caret-forward-outline"></ion-icon>
               </button>
             </div>
@@ -150,7 +158,7 @@ export default {
   border: none;
   color: white;
   outline: none;
-  font-family: 'Arial';
+  font-family: "Arial";
   &__message {
     resize: none;
     height: 50px;

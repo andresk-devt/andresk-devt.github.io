@@ -3,8 +3,8 @@
     <div class="projects-content">
       <div class="projects-content-container">
         <div class="projects-title">
-          <span>Featured</span>
-          <h1 class="projects-title__text">Projects</h1>
+          <span>{{ $t('projects.featured') }}</span>
+          <h1 class="projects-title__text">{{ $t('projects.projects') }}</h1>
           <hr class="projects-title__under" />
         </div>
         <main class="projects-main-content"></main>
