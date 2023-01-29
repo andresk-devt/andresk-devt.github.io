@@ -1,5 +1,6 @@
 <template>
   <main class="main-container">
+    <LanguageSelector class="language-selector" />
     <SectionSelector class="section-selector" :selectedComponent="selectedComponent" @animatedScrollCard="animatedScrollCard" />
     <Home ref="home" id="home" @animatedScrollCard="animatedScrollCard" />
     <Skill ref="skills" id="skills" />
@@ -14,6 +15,7 @@ import Home from "./home/Index.vue";
 import Skill from "./skill/Index.vue";
 import Project from "./project/Index.vue";
 import Contact from "./contact/Index.vue";
+import LanguageSelector from "../components/LanguageSelector.vue";
 
 export default {
   components: {
@@ -21,7 +23,8 @@ export default {
     Home,
     Skill,
     Project,
-    Contact
+    Contact,
+    LanguageSelector
   },
   data() {
     return {
@@ -72,6 +75,12 @@ export default {
 .main-container {
   height: 100%;
   width: 100%;
+}
+.language-selector {
+  position: fixed;
+  top: 1%;
+  right: 1%;
+  z-index: 10;
 }
 .section-selector {
   position: fixed;

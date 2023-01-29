@@ -9,20 +9,14 @@
     >
       <ion-icon :name="item.icon" title></ion-icon>
     </li>
-    <LanguageSelector />
   </ul>
 </template>
 
 <script>
-import LanguageSelector from "./LanguageSelector.vue";
-
 export default {
   name: "SectionSelector",
   props: {
     selectedComponent: String,
-  },
-  components: {
-    LanguageSelector
   },
   data() {
     return {
