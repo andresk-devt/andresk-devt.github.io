@@ -35,6 +35,7 @@ export default {
   }
   &__description {
     font-size: .9rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #ecf0f1;
   }
 }

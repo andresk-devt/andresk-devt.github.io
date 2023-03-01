@@ -7,7 +7,25 @@
   },
   "skills": {
     "services": "Servicios",
-    "skillSet": "Competencias"
+    "skillSet": "Competencias",
+    "github": {
+      "message": "Utilizar Git para controlar las versiones del código, colaborar con otros desarrolladores, manejar conflictos del código y deshacer cambios no deseados y terner versiones estables del producto final."
+    },
+    "frontend": {
+      "message": "Desarrollar la interfaz de usuario de un sitio web o aplicación web utilizando tecnologías como HTML, CSS y JavaScript o frameworks. Asegurarse de que la interfaz sea atractiva, fácil de usar y accesible."
+    },
+    "backend": {
+      "message": "Si bien mi enfoque principal es el desarrollo frontend, también tengo un conocimiento sólido de las tecnologías backend. Esta comprensión me permite trabajar de manera más efectiva con los desarrolladores de backend y tener una mejor comunicación con ellos."
+    },
+    "web": {
+      "message": "La importancia de asegurarse de que el sitio web o la aplicación que estoy desarrollando se cargue rápidamente y se muestre correctamente en diferentes navegadores web y dispositivos."
+    },
+    "test":  {
+      "message": "Como desarrollador frontend, entiendo la importancia de probar y depurar el código de forma exhaustiva para identificar y corregir errores antes de que lleguen a los usuarios finales."
+    },
+    "responsive": {
+      "message": "Diseñar y desarrollar interfaces de usuario que se adapten a diferentes tamaños y resoluciones de pantalla. Asegurarse de que la experiencia del usuario sea óptima independientemente del dispositivo utilizado para acceder al sitio web o la aplicación."
+    }
   },
   "projects": {
     "featured": "Destacados",

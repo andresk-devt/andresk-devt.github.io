@@ -11,7 +11,7 @@
           <div class="skills-container-list">
             <div
               class="skills-container-list__item"
-              v-for="item in skills"
+              v-for="item in localizedSkills"
               :key="item.title"
             >
               <Card :skill="item" />
@@ -37,42 +37,46 @@ export default {
         {
           icon: "logo-github",
           title: "Git Version Control",
-          description:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nonincidunt dolor, voluptate ab ad ipsum. Magnam, ipsum recusandae etdolore soluta maxime.",
+          description: 'github',
         },
         {
           icon: "logo-angular",
           title: "Front-End Development",
-          description:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nonincidunt dolor, voluptate ab ad ipsum. Magnam, ipsum recusandae etdolore soluta maxime.",
+          description: "frontend",
         },
         {
           icon: "server-outline",
           title: "Back-End Development",
-          description:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nonincidunt dolor, voluptate ab ad ipsum. Magnam, ipsum recusandae etdolore soluta maxime.",
+          description: "backend",
         },
         {
           icon: "globe-outline",
           title: "Web Development",
-          description:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nonincidunt dolor, voluptate ab ad ipsum. Magnam, ipsum recusandae etdolore soluta maxime.",
+          description: "web",
         },
         {
-          icon: "logo-amazon",
-          title: "AWS",
-          description:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nonincidunt dolor, voluptate ab ad ipsum. Magnam, ipsum recusandae etdolore soluta maxime.",
+          icon: "bag-check-outline",
+          title: "Testing",
+          description: "test",
         },
         {
           icon: "phone-portrait-outline",
           title: "Responsive Design",
-          description:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nonincidunt dolor, voluptate ab ad ipsum. Magnam, ipsum recusandae etdolore soluta maxime.",
+          description: "responsive",
         },
       ],
     };
   },
+  computed: {
+    localizedSkills() {
+      return this.skills.map(skill => {
+        return {
+          ...skill,
+          description: this.$t(`skills.${skill.description}.message`)
+        }
+      });
+    }
+  }
 };
 </script>
 
@@ -133,7 +137,7 @@ export default {
   width: 100%;
   height: 90%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30%, 4fr));
+  grid-template-columns: repeat(auto-fill, minmax(32%, 4fr));
   gap: 20px;
   grid-template-rows: 50% 50%;
   @media (max-width: 800px) {
