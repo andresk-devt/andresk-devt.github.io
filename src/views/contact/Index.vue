@@ -3,36 +3,16 @@
     <div class="contact-content">
       <div class="contact-content-container">
         <div class="contact-container">
-          <div class="contact-form">
-            <h3 class="contact-form__title">{{ $t("contactMe.contact") }}</h3>
-            <hr class="contact-form__under" />
-            <input
-              type="text"
-              class="input-container"
-              :placeholder="$t('contactMe.email')"
-            />
-            <textarea
-              type="text"
-              class="input-container input-container__message"
-              :placeholder="$t('contactMe.message')"
-            />
-            <div class="contact-button-container">
-              <button class="contact-button-container__button">
-                {{ $t("contactMe.stayInContact") }}
-                <ion-icon name="caret-forward-outline"></ion-icon>
-              </button>
-            </div>
-          </div>
           <div class="contact-social-list">
-            <div class="contact-social-list__item">
+            <a class="contact-social-list__item" href="https://www.linkedin.com/in/andres-dvt/" target="_blank">
               <ion-icon name="logo-linkedin"></ion-icon>
-            </div>
-            <div class="contact-social-list__item">
+            </a>
+            <a class="contact-social-list__item">
               <ion-icon name="logo-skype"></ion-icon>
-            </div>
-            <div class="contact-social-list__item">
+            </a>
+            <a class="contact-social-list__item" href="https://github.com/andresk-devt" target="_blank">
               <ion-icon name="logo-github"></ion-icon>
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -96,13 +76,8 @@ export default {
   width: 100%;
   align-items: center;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   height: 90%;
-  @media (max-width: 800px) {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
 }
 .contact-social-list {
   width: 50%;
