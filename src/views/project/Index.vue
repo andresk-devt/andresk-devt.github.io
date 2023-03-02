@@ -70,6 +70,5 @@ export default {
   height: 90%;
   margin: 15px auto;
   width: 100%;
-  overflow-y: scroll;
 }
 </style>

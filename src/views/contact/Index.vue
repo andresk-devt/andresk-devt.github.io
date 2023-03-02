@@ -4,13 +4,18 @@
       <div class="contact-content-container">
         <div class="contact-container">
           <div class="contact-social-list">
-            <a class="contact-social-list__item" href="https://www.linkedin.com/in/andres-dvt/" target="_blank">
+            <a
+              class="contact-social-list__item"
+              href="https://www.linkedin.com/in/andres-dvt/"
+              target="_blank"
+            >
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
-            <a class="contact-social-list__item">
-              <ion-icon name="logo-skype"></ion-icon>
-            </a>
-            <a class="contact-social-list__item" href="https://github.com/andresk-devt" target="_blank">
+            <a
+              class="contact-social-list__item"
+              href="https://github.com/andresk-devt"
+              target="_blank"
+            >
               <ion-icon name="logo-github"></ion-icon>
             </a>
           </div>

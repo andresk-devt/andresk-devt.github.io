@@ -88,7 +88,7 @@ export default {
   }
   &__information {
     margin: 20px auto;
-    font-family: "Arial";
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;
     font-size: 1rem;
     p {
