@@ -35,6 +35,7 @@
     "contact": "Contact With Me",
     "email": "Email:",
     "message": "Message:",
-    "stayInContact": "Stay Connected"
+    "stayInContact": "Stay Connected",
+    "tooltip": "Email was copied."
   }
 }

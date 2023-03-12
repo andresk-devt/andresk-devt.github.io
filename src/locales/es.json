@@ -35,6 +35,7 @@
     "contact": "Contacta Conmigo",
     "email": "Correo electronico:",
     "message": "Mensaje:",
-    "stayInContact": "Contactar"
+    "stayInContact": "Contactar",
+    "tooltip": "Correo fue copiado."
   }
 }

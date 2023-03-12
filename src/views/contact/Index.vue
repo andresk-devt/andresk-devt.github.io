@@ -18,6 +18,13 @@
             >
               <ion-icon name="logo-github"></ion-icon>
             </a>
+            <a
+              class="contact-social-list__item"
+              @click="copyEmail()"
+            >
+              <ion-icon name="mail-outline"></ion-icon>
+            </a>
+            <Tooltip class="tooltip-content" :showTooltip="showTooltip" />
           </div>
         </div>
       </div>
@@ -26,8 +33,28 @@
 </template>
 
 <script>
+import Tooltip from '@/components/Tooltip.vue';
+
 export default {
   name: "Contact",
+  components: {
+    Tooltip,
+  },
+  data() {
+    return {
+      showTooltip: false
+    }
+  },
+  methods: {
+    copyEmail() {
+      const emailToCopy = 'personalandres5@gmail.com';
+      navigator.clipboard.writeText(emailToCopy)
+      this.showTooltip = true;
+      setTimeout(() => {
+        this.showTooltip = false;
+      }, 1000);
+    }
+  }
 };
 </script>
 
