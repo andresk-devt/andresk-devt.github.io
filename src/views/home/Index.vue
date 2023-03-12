@@ -4,20 +4,32 @@
       <div class="home-content-container">
         <div class="personal-content">
           <div class="personal-content__title">
-            <p class="personal-content__text">{{ $t('home.gretting') }}</p>
+            <p class="personal-content__text">{{ $t("home.gretting") }}</p>
             <div class="title-content">
               <ul class="title-list">
                 <li class="title-list__item">Andres Camilo Gomez!</li>
-                <li class="title-list__item">{{ $t('home.labor') }}</li>
+                <li class="title-list__item">{{ $t("home.labor") }}</li>
               </ul>
             </div>
           </div>
           <div class="personal-content__information">
             <p>
-              {{ $t('home.aboutMe') }}
+              {{ $t("home.aboutMe") }}
             </p>
           </div>
-          <button class="button-content" @click="scrollTo('skills')">{{ $t('home.skills') }}</button>
+          <div class="buttons-container">
+            <button class="button-content" @click="scrollTo('skills')">
+              {{ $t("home.skills") }}
+            </button>
+            <button class="button-content button-content-document">
+              <a
+                href="https://www.dropbox.com/s/gxyuo2502h253d1/CV_Andres-Camilo-Gomez.pdf?raw=1" target="_blank"
+              >
+                <ion-icon name="eye-outline"></ion-icon>
+                <p>CV</p>
+              </a>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -29,9 +41,9 @@ export default {
   name: "Home",
   methods: {
     scrollTo(ref) {
-      this.$emit('animatedScrollCard', ref);
-    }
-  }
+      this.$emit("animatedScrollCard", ref);
+    },
+  },
 };
 </script>
 
@@ -88,14 +100,15 @@ export default {
   }
   &__information {
     margin: 20px auto;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     color: white;
     font-size: 1rem;
     p {
       line-height: 20px;
     }
     @media (min-width: 800px) {
-      font-size: .9rem;
+      font-size: 0.9rem;
       width: 60%;
       margin: 20px 0px;
     }
@@ -126,14 +139,31 @@ export default {
     margin: 0;
   }
 }
+.buttons-container {
+  display: flex;
+  gap: 10px;
+}
 .button-content {
   border: none;
   height: 35px;
-  width: 100px;
   border-radius: 13px;
   background: rgb(246, 71, 85);
   color: white;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  &-document {
+    a {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      p {
+        margin-left: 4px;
+      }
+    }
+  }
   &:hover {
     filter: brightness(0.9);
   }
