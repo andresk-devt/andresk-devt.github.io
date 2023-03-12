@@ -1,8 +1,7 @@
-module.exports = {
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/andresk-devt.github.io/'
-    : '/',
+const { defineConfig } = require('@vue/cli-service')
+module.exports = defineConfig({
   transpileDependencies: true,
+
   pluginOptions: {
     i18n: {
       locale: 'en',
@@ -13,4 +12,4 @@ module.exports = {
       enableBridge: true
     }
   }
-}
+})
