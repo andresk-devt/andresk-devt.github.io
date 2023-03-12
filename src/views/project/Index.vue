@@ -3,11 +3,21 @@
     <div class="projects-content">
       <div class="projects-content-container">
         <div class="projects-title">
-          <span>{{ $t('projects.featured') }}</span>
-          <h1 class="projects-title__text">{{ $t('projects.projects') }}</h1>
+          <span>{{ $t("projects.featured") }}</span>
+          <h1 class="projects-title__text">{{ $t("projects.projects") }}</h1>
           <hr class="projects-title__under" />
         </div>
-        <main class="projects-main-content"></main>
+        <main class="projects-main-content">
+          <p
+            style="
+              font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+                'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+              color: white;
+            "
+          >
+            Under construction...
+          </p>
+        </main>
       </div>
     </div>
   </div>
