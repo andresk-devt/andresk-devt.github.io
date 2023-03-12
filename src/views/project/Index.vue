@@ -15,7 +15,7 @@
               color: white;
             "
           >
-            Under construction...
+            Under construction..
           </p>
         </main>
       </div>
